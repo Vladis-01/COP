@@ -43,6 +43,11 @@ namespace Lab1Appanov.Components
 
 			get
 			{
+				if (first)
+				{
+					first = false;
+					return dateTimePicker1.Value;
+				}
 				if (!FirstDate.HasValue || !LastDate.HasValue)
 				{
 					throw new Exception();
